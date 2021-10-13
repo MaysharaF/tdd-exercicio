@@ -50,4 +50,21 @@ describe('Calcular Salário', () => {
     expect(result.liquido).toBe(2250);
   });
 
+
+  test('Realizando teste com base no salario para Gerente', () => {
+
+    const funcionario = {
+      nome: "Teste4",
+      email: "teste@teste.com",
+      salarioBase: 5000,
+      cargo: "Gerente"
+    }
+
+    result = calculaSalario(funcionario);
+
+    expect(result.desconto).toBe(1000);
+    expect(result.taxa).toBe(0.3);
+    expect(result.liquido).toBe(3500);
+  });
+
 });
