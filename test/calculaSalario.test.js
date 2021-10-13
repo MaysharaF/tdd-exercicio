@@ -45,7 +45,7 @@ describe('Calcular Salário', () => {
 
     result = calculaSalario(funcionario);
 
-    expect(result.desconto).toBe(200);
+    expect(result.desconto).toBe(750);
     expect(result.taxa).toBe(0.25);
     expect(result.liquido).toBe(2250);
   });
