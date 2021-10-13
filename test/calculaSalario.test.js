@@ -34,5 +34,20 @@ describe('Calcular Salário', () => {
   });
 
 
+  test('Realizando teste com base no salario para Testador', () => {
+
+    const funcionario = {
+      nome: "Teste3",
+      email: "teste@teste.com",
+      salarioBase: 3000,
+      cargo: "Testador"
+    }
+
+    result = calculaSalario(funcionario);
+
+    expect(result.desconto).toBe(200);
+    expect(result.taxa).toBe(0.25);
+    expect(result.liquido).toBe(2250);
+  });
 
 });
